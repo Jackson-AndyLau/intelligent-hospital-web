@@ -1,0 +1,25 @@
+# （配置）在上传中需被 Git 忽略的文件（夹）
+.DS_Store
+node_modules/
+dist/
+
+# local env files
+.env.local
+.env.*.local
+
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+tests/**/coverage/
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
