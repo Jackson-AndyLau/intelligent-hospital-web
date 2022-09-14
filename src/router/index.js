@@ -54,7 +54,33 @@ export const constantRoutes = [
       meta: { title: '监控大屏', icon: 'dashboard' }
     }]
   },
-
+  {
+    path: '/hospital',
+    component: Layout,
+    redirect: '/hospital/list',
+    name: '医院管理',
+    meta: { title: '医院管理', icon: 'el-icon-s-help' },
+    children: [
+      {
+        path: 'hospital-set/list',
+        name: '医院设置',
+        component: () => import('@/views/hospital/hospital-set/list'),
+        meta: { title: '医院设置', icon: 'table' }
+      },
+      {
+        path: 'hospital-set/add',
+        name: '新增',
+        component: () => import('@/views/hospital/hospital-set/form'),
+        meta: { title: '添加', icon: 'table' }
+      },
+      {
+        path: 'hospital-set/list',
+        name: '编辑',
+        component: () => import('@/views/hospital/hospital-set/form'),
+        meta: { title: '编辑', icon: 'table' }
+      }
+    ]
+  },
   {
     path: '/example',
     component: Layout,
